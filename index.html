@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIZAJ STUDIO | مزاج ستوديو</title>
+  <meta name="description" content="MIZAJ STUDIO – مساحة جديدة للحلول الرقمية. أنظمة إدارة، مواقع وتجارب رقمية، وكتالوجات احترافية. by Eng. Amjad Ahmed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">M</span>
+      <span class="brand-text">MIZAJ <b>STUDIO</b></span>
+    </a>
+    <nav class="links">
+      <a href="#services" data-i18n="nav.services">الخدمات</a>
+      <a href="#course" data-i18n="nav.course">الكورس</a>
+      <a href="#about" data-i18n="nav.about">من نحن</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="glow"></div>
+      <p class="eyebrow" data-i18n="hero.eyebrow">by Eng. Amjad Ahmed</p>
+      <h1>
+        <span data-i18n="hero.title1">مساحة جديدة</span><br />
+        <span class="accent" data-i18n="hero.title2">للحلول الرقمية</span>
+      </h1>
+      <p class="lead" data-i18n="hero.lead">نصمّم أنظمة إدارة ومواقع وكتالوجات تخلّي شغلك أوضح، أسرع، وأجمل.</p>
+      <div class="cta">
+        <a href="#contact" class="btn primary" data-i18n="hero.cta1">ابدأ مشروعك</a>
+        <a href="#services" class="btn ghost" data-i18n="hero.cta2">شوف خدماتنا</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <h2 class="section-title" data-i18n="services.title">خدماتنا</h2>
+      <p class="section-sub" data-i18n="services.sub">حلول مصمّمة على مقاس شغلك، مو قوالب جاهزة.</p>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="icon">⚙️</div>
+          <h3 data-i18n="services.s1.t">أنظمة إدارة الأعمال</h3>
+          <p data-i18n="services.s1.d">أنظمة متكاملة للمبيعات، المخزون، الزبائن والتقارير، تشتغل من الحاسبة والموبايل.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🌐</div>
+          <h3 data-i18n="services.s2.t">مواقع وتجارب رقمية</h3>
+          <p data-i18n="services.s2.d">مواقع سريعة وأنيقة بالعربي والإنگليزي، تعكس هوية علامتك التجارية.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📖</div>
+          <h3 data-i18n="services.s3.t">كتالوجات احترافية</h3>
+          <p data-i18n="services.s3.d">كتالوجات منتجات تفاعلية ومطبوعة، مرتبة وسهلة المشاركة مع زبائنك.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Course -->
+    <section id="course" class="section course reveal">
+      <div class="course-inner">
+        <span class="badge" data-i18n="course.badge">قريباً</span>
+        <h2 data-i18n="course.title">الذكاء الاصطناعي بوعي</h2>
+        <p data-i18n="course.desc">كورس للمبتدئين في العراق، يعلّمك تستخدم أدوات الذكاء الاصطناعي بشغلك وحياتك اليومية بطريقة ذكية وواعية.</p>
+        <ul class="points">
+          <li data-i18n="course.p1">شنو هو الذكاء الاصطناعي وشلون يشتغل</li>
+          <li data-i18n="course.p2">استخدام عملي بالشغل والدراسة</li>
+          <li data-i18n="course.p3">الاستخدام الآمن والمسؤول</li>
+        </ul>
+        <p class="byline" data-i18n="course.by">إعداد وتقديم: م. أمجد أحمد</p>
+        <a href="#contact" class="btn primary" data-i18n="course.cta">سجّل اهتمامك</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about reveal">
+      <div class="about-mark">M</div>
+      <div>
+        <h2 class="section-title" data-i18n="about.title">من نحن</h2>
+        <p data-i18n="about.p1">مزاج ستوديو استوديو رقمي أسسه المهندس أمجد أحمد في بغداد.</p>
+        <p data-i18n="about.p2">نجمع بين خبرة حقيقية بالسوق والمبيعات وبين التقنية الحديثة، حتى نبني حلول رقمية تفيد أصحاب الأعمال فعلاً.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact reveal">
+      <h2 class="section-title" data-i18n="contact.title">تواصل ويانا</h2>
+      <p class="section-sub" data-i18n="contact.sub">عندك فكرة مشروع؟ احچيلنا عنها.</p>
+      <div class="contact-buttons">
+        <a class="btn whatsapp" href="https://wa.me/9647775559340" target="_blank" rel="noopener" data-i18n="contact.wa">واتساب</a>
+        <!-- Instagram button hidden until the real account is ready:
+        <a class="btn instagram" href="https://instagram.com/USERNAME" target="_blank" rel="noopener" data-i18n="contact.ig">إنستغرام</a>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> MIZAJ STUDIO</span>
+    <span data-i18n="footer.by">by Eng. Amjad Ahmed</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
