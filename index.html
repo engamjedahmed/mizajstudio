@@ -3,112 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f2eb" />
   <title>MIZAJ STUDIO | مزاج ستوديو</title>
-  <meta name="description" content="MIZAJ STUDIO – مساحة جديدة للحلول الرقمية. أنظمة إدارة، مواقع وتجارب رقمية، وكتالوجات احترافية. by Eng. Amjad Ahmed." />
+  <meta name="description" content="مزاج ستوديو، استوديو رقمي من بغداد أسسه م. أمجد أحمد. أنظمة عملاء، مواقع بالعربي والإنگليزي، كتالوجات، منيو QR ومواد تدريبية." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="nav">
-    <a href="#top" class="brand">
-      <span class="brand-mark">M</span>
-      <span class="brand-text">MIZAJ <b>STUDIO</b></span>
-    </a>
-    <nav class="links">
-      <a href="#services" data-i18n="nav.services">الخدمات</a>
-      <a href="#course" data-i18n="nav.course">الكورس</a>
-      <a href="#about" data-i18n="nav.about">من نحن</a>
-      <a href="#contact" data-i18n="nav.contact">تواصل</a>
-    </nav>
-    <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+  <a class="skip-link" href="#main" data-i18n="skip">انتقل للمحتوى</a>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="مزاج ستوديو — الرئيسية" data-i18n-aria="brand.home">
+        <span class="brand-mark" aria-hidden="true">m<span>•</span></span>
+        <span class="brand-text" dir="ltr">MIZAJ<span>STUDIO</span></span>
+      </a>
+      <nav class="links" id="mainNav" aria-label="القائمة الرئيسية" data-i18n-aria="nav.label">
+        <a href="#services" data-i18n="nav.services">خدماتنا</a>
+        <a href="#about" data-i18n="nav.about">عن مزاج</a>
+        <a href="#course" data-i18n="nav.course">الكورس</a>
+        <a href="#contact" class="nav-contact"><span data-i18n="nav.contact">خلّينا نحچي</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English" lang="en" hidden>EN</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة" data-i18n-aria="menu.open" hidden>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="glow"></div>
-      <p class="eyebrow" data-i18n="hero.eyebrow">by Eng. Amjad Ahmed</p>
-      <h1>
-        <span data-i18n="hero.title1">مساحة جديدة</span><br />
-        <span class="accent" data-i18n="hero.title2">للحلول الرقمية</span>
-      </h1>
-      <p class="lead" data-i18n="hero.lead">نصمّم أنظمة إدارة ومواقع وكتالوجات تخلّي شغلك أوضح، أسرع، وأجمل.</p>
-      <div class="cta">
-        <a href="#contact" class="btn primary" data-i18n="hero.cta1">ابدأ مشروعك</a>
-        <a href="#services" class="btn ghost" data-i18n="hero.cta2">شوف خدماتنا</a>
+  <main id="main" tabindex="-1">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">استوديو رقمي · بغداد، العراق</span></p>
+        <h1 id="hero-title"><span data-i18n="hero.title1">فكرتك إلها</span><br /><span class="accent" data-i18n="hero.title2">مزاج ثاني.</span></h1>
+        <p class="lead" data-i18n="hero.lead">نحوّل أفكارك إلى حلول رقمية تشبهك. أنظمة ترتّب شغلك، مواقع تعبّر عنك، وكتالوجات تخلّي منتجاتك تحچي.</p>
+        <div class="cta">
+          <a href="#contact" class="btn primary"><span data-i18n="hero.cta1">خلّينا نبدأ مشروعك</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          <a href="#services" class="text-link"><span data-i18n="hero.cta2">تعرّف على خدماتنا</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero-credit"><span class="short-rule" aria-hidden="true"></span><span data-i18n="hero.credit">فكرة وخبرة م. أمجد أحمد</span></p>
       </div>
+      <div class="studio-art" aria-hidden="true">
+        <div class="art-top"><span>MIZAJ / DIGITAL STUDIO</span><span>BGD — IQ</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-word" dir="rtl">مزاج<span class="art-dot"></span></div>
+        <span class="art-spark"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span>
+        <div class="art-bottom"><span>IDEA. DESIGN.<br />DIGITAL.</span><span class="art-seal">M<br />/ S</span></div>
+      </div>
+      <div class="hero-bottom"><span data-i18n="hero.bottom">تفكير إبداعي. حلول عملية.</span><span dir="ltr">DESIGNED WITH MIZAJ <span aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span></span></div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <h2 class="section-title" data-i18n="services.title">خدماتنا</h2>
-      <p class="section-sub" data-i18n="services.sub">حلول مصمّمة على مقاس شغلك، مو قوالب جاهزة.</p>
-      <div class="grid">
-        <article class="card reveal">
-          <div class="icon">⚙️</div>
-          <h3 data-i18n="services.s1.t">أنظمة إدارة الأعمال</h3>
-          <p data-i18n="services.s1.d">أنظمة متكاملة للمبيعات، المخزون، الزبائن والتقارير، تشتغل من الحاسبة والموبايل.</p>
+    <div class="discipline-strip" aria-hidden="true"><div class="container"><span data-i18n="strip.systems">أنظمة إدارة</span><span><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span><span data-i18n="strip.web">مواقع وتجارب رقمية</span><span><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span><span data-i18n="strip.catalogs">كتالوجات احترافية</span></div></div>
+
+    <section id="services" class="section container" aria-labelledby="services-title">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span class="section-index">01 /</span><span data-i18n="services.label">شنو نسوّي</span></p><h2 id="services-title" data-i18n="services.title">كل فكرة، إلها حل.</h2></div>
+        <p class="section-intro" data-i18n="services.sub">نختار التقنية اللي تخدم شغلك، ونصمّمها على مقاس احتياجك.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="card-top"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="7" width="13" height="13" rx="2"/><rect x="28" y="7" width="13" height="13" rx="2"/><rect x="7" y="28" width="13" height="13" rx="2"/><path d="M28 34h13m-6.5-6.5v13"/></svg></span><span class="card-number">01</span></div>
+          <h3 data-i18n="services.s1.t">شغلك، بصورة أوضح.</h3>
+          <p class="service-type" data-i18n="services.s1.type">أنظمة العملاء وتخطيط الاحتياج</p>
+          <p data-i18n="services.s1.d">حسابات عملاء وصلاحيات حسب الفروع، تخطيط احتياج ومخزون، وتقارير قابلة للتصدير. نحدّد الوظائف وسعة النظام حسب مشروعك.</p>
+          <div class="service-tags"><span data-i18n="services.s1.tag1">تنظيم</span><span data-i18n="services.s1.tag2">متابعة</span><span data-i18n="services.s1.tag3">تقارير</span></div>
+          <a class="card-link" href="#contact"><span data-i18n="services.s1.link">نحچي عن نظامك</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
         </article>
-        <article class="card reveal">
-          <div class="icon">🌐</div>
-          <h3 data-i18n="services.s2.t">مواقع وتجارب رقمية</h3>
-          <p data-i18n="services.s2.d">مواقع سريعة وأنيقة بالعربي والإنگليزي، تعكس هوية علامتك التجارية.</p>
+        <article class="service-card reveal">
+          <div class="card-top"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="5" y="8" width="38" height="32" rx="3"/><path d="M5 17h38M11 12.5h1m4 0h1m3 0h1M18 24l-5 5 5 5m12-10 5 5-5 5m-4-13-4 16"/></svg></span><span class="card-number">02</span></div>
+          <h3 data-i18n="services.s2.t">حضور يشبه هويتك.</h3>
+          <p class="service-type" data-i18n="services.s2.type">مواقع وتجارب رقمية</p>
+          <p data-i18n="services.s2.d">مواقع سريعة وأنيقة بالعربي والإنگليزي. تجربة واضحة على كل شاشة، تخلّي الناس تتعرّف عليك وتتواصل وياك بسهولة.</p>
+          <div class="service-tags"><span data-i18n="services.s2.tag1">تصميم</span><span data-i18n="services.s2.tag2">تطوير</span><span data-i18n="services.s2.tag3">لغتين</span></div>
+          <a class="card-link" href="#contact"><span data-i18n="services.s2.link">نخطّط لموقعك</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
         </article>
-        <article class="card reveal">
-          <div class="icon">📖</div>
-          <h3 data-i18n="services.s3.t">كتالوجات احترافية</h3>
-          <p data-i18n="services.s3.d">كتالوجات منتجات تفاعلية ومطبوعة، مرتبة وسهلة المشاركة مع زبائنك.</p>
+        <article class="service-card reveal">
+          <div class="card-top"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 12C18 8 12 7 5 9v29c7-2 13-1 19 3m0-29c6-4 12-5 19-3v29c-7-2-13-1-19 3V12Z"/><path d="m11 17 7 2m-7 6 7 2m12-8 7-2m-7 10 7-2"/></svg></span><span class="card-number">03</span></div>
+          <h3 data-i18n="services.s3.t">منتجاتك تحچي عنك.</h3>
+          <p class="service-type" data-i18n="services.s3.type">كتالوجات احترافية</p>
+          <p data-i18n="services.s3.d">كتالوجات PDF بالعربي والإنگليزي، بنسخ مع الأسعار أو بدونها وروابط تواصل قابلة للضغط. نرتّب الصور والمواصفات والاستخدامات، ونجهّز نسخ المندوبين حسب الحاجة.</p>
+          <div class="service-tags"><span data-i18n="services.s3.tag1">تفاعلي</span><span data-i18n="services.s3.tag2">مطبوع</span><span data-i18n="services.s3.tag3">سهل المشاركة</span></div>
+          <a class="card-link" href="#contact"><span data-i18n="services.s3.link">نرتّب كتالوجك</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-top"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M7 7h12v12H7zM29 7h12v12H29zM7 29h12v12H7zM29 29h5v5h7v7H29zM25 7v12M7 25h12m6 0h16M25 34v7"/></svg></span><span class="card-number">04</span></div>
+          <h3 data-i18n="services.s4.t">منيو يوصل بضغطة.</h3>
+          <p class="service-type" data-i18n="services.s4.type">منيو رقمي وتجارب QR</p>
+          <p data-i18n="services.s4.d">منيو PDF بهوية مشروعك ورمز QR للوصول إله. ونقدر نصمّم صفحات للمنتجات والوصفات وطريقة التحضير، حسب النطاق اللي تحتاجه.</p>
+          <div class="service-tags"><span data-i18n="services.s4.tag1">منيو PDF</span><span>QR</span><span data-i18n="services.s4.tag3">تفاصيل المنتج</span></div>
+          <a class="card-link" href="#contact"><span data-i18n="services.s4.link">نصمّم منيو مشروعك</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-top"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="7" width="36" height="26" rx="2"/><path d="M24 33v8m-9 0h18M13 25l7-6 6 3 9-9M29 13h6v6"/></svg></span><span class="card-number">05</span></div>
+          <h3 data-i18n="services.s5.t">معلومة واضحة. فريق أجهز.</h3>
+          <p class="service-type" data-i18n="services.s5.type">عروض تقديمية ومواد تدريب</p>
+          <p data-i18n="services.s5.d">عروض للمنتجات وتدريب فرق المبيعات والباريستا. نحوّل المحتوى المعتمد إلى شرائح وبطاقات منتج ووصفات ومقارنات تساعد على الشرح.</p>
+          <div class="service-tags"><span data-i18n="services.s5.tag1">عروض منتجات</span><span data-i18n="services.s5.tag2">مبيعات</span><span data-i18n="services.s5.tag3">باريستا</span></div>
+          <a class="card-link" href="#contact"><span data-i18n="services.s5.link">نرتّب عرضك القادم</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
         </article>
       </div>
     </section>
 
-    <!-- Course -->
-    <section id="course" class="section course reveal">
-      <div class="course-inner">
-        <span class="badge" data-i18n="course.badge">قريباً</span>
-        <h2 data-i18n="course.title">الذكاء الاصطناعي بوعي</h2>
-        <p data-i18n="course.desc">كورس للمبتدئين في العراق، يعلّمك تستخدم أدوات الذكاء الاصطناعي بشغلك وحياتك اليومية بطريقة ذكية وواعية.</p>
-        <ul class="points">
-          <li data-i18n="course.p1">شنو هو الذكاء الاصطناعي وشلون يشتغل</li>
-          <li data-i18n="course.p2">استخدام عملي بالشغل والدراسة</li>
-          <li data-i18n="course.p3">الاستخدام الآمن والمسؤول</li>
-        </ul>
-        <p class="byline" data-i18n="course.by">إعداد وتقديم: م. أمجد أحمد</p>
-        <a href="#contact" class="btn primary" data-i18n="course.cta">سجّل اهتمامك</a>
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-identity reveal"><span class="eyebrow" dir="ltr">THE MIND BEHIND MIZAJ</span><span class="founder-monogram" aria-hidden="true">m<span>•</span></span><div><p data-i18n="about.founder">م. أمجد أحمد</p><span data-i18n="about.role">مؤسس مزاج ستوديو · بغداد</span></div></div>
+        <div class="about-copy reveal"><p class="eyebrow"><span class="section-index">02 /</span><span data-i18n="about.label">عن مزاج</span></p><h2 id="about-title"><span data-i18n="about.title1">نفهم الشغل.</span><br /><span data-i18n="about.title2">ونصمّم اللي يفيده.</span></h2><p data-i18n="about.p1">مزاج ستوديو استوديو رقمي أسسه المهندس أمجد أحمد في بغداد. نجمع خبرة المبيعات والباريستا والتصميم الداخلي، حتى نعرض المنتجات والمعلومات بطريقة يفهمها فريقك وزبونك.</p><p data-i18n="about.p2">نرتّب المعلومة والهوية البصرية، ونربط التصميم بالاستخدام اليومي. من كتالوج المورد إلى منيو المقهى ونظام العملاء، نخلي الوضوح وسهولة الاستخدام أساس كل تفصيل.</p><div class="about-note"><span aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span><span data-i18n="about.note">من بغداد، لأفكار تستاهل تطلع للنور.</span></div></div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section about reveal">
-      <div class="about-mark">M</div>
-      <div>
-        <h2 class="section-title" data-i18n="about.title">من نحن</h2>
-        <p data-i18n="about.p1">مزاج ستوديو استوديو رقمي أسسه المهندس أمجد أحمد في بغداد.</p>
-        <p data-i18n="about.p2">نجمع بين خبرة حقيقية بالسوق والمبيعات وبين التقنية الحديثة، حتى نبني حلول رقمية تفيد أصحاب الأعمال فعلاً.</p>
+    <section class="section container process-section" aria-labelledby="process-title">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="section-index">03 /</span><span data-i18n="process.label">طريقتنا</span></p><h2 id="process-title" data-i18n="process.title">نبدأ بالحچي. نوصل لحل.</h2></div><p class="section-intro" data-i18n="process.sub">مساحة للفكرة، واهتمام بكل خطوة.</p></div>
+      <ol class="process-list">
+        <li class="reveal"><span class="step-number">01</span><h3 data-i18n="process.p1.t">نسمع ونفهم</h3><p data-i18n="process.p1.d">نحچي عن شغلك وجمهورك، ونراجع المحتوى والصور المعتمدة اللي تجهّزها للمشروع.</p></li>
+        <li class="reveal"><span class="step-number">02</span><h3 data-i18n="process.p2.t">نرتّب ونصمّم</h3><p data-i18n="process.p2.d">نحدّد الصفحات والأصناف واللغات والوظائف، ونتفق على السعر والنطاق قبل التنفيذ.</p></li>
+        <li class="reveal"><span class="step-number">03</span><h3 data-i18n="process.p3.t">نبني ونراجع</h3><p data-i18n="process.p3.d">نطوّر التصميم، نراجع التفاصيل والروابط وياك، ونجهّز التسليم حسب النطاق المتفق عليه.</p></li>
+      </ol>
+
+      <aside class="project-brief reveal" aria-labelledby="brief-title">
+        <div class="brief-heading"><p class="eyebrow" data-i18n="brief.label">اتفاق واضح من البداية</p><h3 id="brief-title" data-i18n="brief.title">نعرف المطلوب، ونحدّد التفاصيل.</h3><p data-i18n="brief.intro">كل مشروع إله احتياج. عرض السعر يوضّح شنو داخل بالتنفيذ، وشنو يحتاج اتفاق منفصل.</p></div>
+        <div class="brief-questions">
+          <details><summary data-i18n="brief.q1">شلون يتحدّد سعر المشروع؟</summary><p data-i18n="brief.a1">حسب عدد الصفحات والأصناف، اللغات والنسخ، ووظائف النظام وصلاحيات المستخدمين. نحدّد السعر والمدة وجولات التعديل بعرض خاص بمشروعك.</p></details>
+          <details><summary data-i18n="brief.q2">شنو أجهّز حتى نبدأ؟</summary><p data-i18n="brief.a2">معلومات مشروعك، الهوية البصرية المتوفرة، وصور المنتجات ونصوصها المعتمدة. نراجع المواد ونحدّد أي متطلبات إضافية قبل البدء.</p></details>
+          <details><summary data-i18n="brief.q3">الاستضافة والصيانة مشمولة؟</summary><p data-i18n="brief.a3">نوضّح رسوم النطاق والاستضافة والتجديد والصيانة بشكل مستقل عن التصميم والتطوير. وأي ميزة جديدة أو تغيير خارج النطاق يحتاج اتفاق إضافي.</p></details>
+        </div>
+      </aside>
+    </section>
+
+    <section id="course" class="container course-section" aria-labelledby="course-title">
+      <div class="course-panel reveal">
+        <div class="course-copy"><p class="eyebrow"><span class="section-index">04 /</span><span data-i18n="course.label">مساحة للتعلّم</span></p><span class="badge"><span class="status-dot" aria-hidden="true"></span><span data-i18n="course.badge">قريباً · للمبتدئين في العراق</span></span><h2 id="course-title" data-i18n="course.title">الذكاء الاصطناعي بوعي.</h2><p data-i18n="course.desc">أدوات جديدة، وفهم أعمق. كورس يعلّمك تستخدم الذكاء الاصطناعي بشغلك وحياتك اليومية بطريقة ذكية وواعية.</p><ul class="points"><li data-i18n="course.p1">شنو هو الذكاء الاصطناعي وشلون يشتغل</li><li data-i18n="course.p2">تطبيقات عملية بالشغل والدراسة</li><li data-i18n="course.p3">استخدام آمن ومسؤول</li></ul><p class="byline" data-i18n="course.by">إعداد وتقديم: م. أمجد أحمد</p><a href="https://wa.me/9647775559340" class="btn light" target="_blank" rel="noopener noreferrer"><span data-i18n="course.cta">استفسر عن الكورس على واتساب</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+        <div class="course-art" aria-hidden="true"><span class="course-art-label">MIZAJ / LEARNING</span><div class="ai-symbol"><span><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span></div><div class="course-art-bottom"><span>AI<br />WITH AWARENESS.</span><span>فهم.<br />تجربة.<br />وعي.</span></div></div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section contact reveal">
-      <h2 class="section-title" data-i18n="contact.title">تواصل ويانا</h2>
-      <p class="section-sub" data-i18n="contact.sub">عندك فكرة مشروع؟ احچيلنا عنها.</p>
-      <div class="contact-buttons">
-        <a class="btn whatsapp" href="https://wa.me/9647775559340" target="_blank" rel="noopener" data-i18n="contact.wa">واتساب</a>
-        <!-- Instagram button hidden until the real account is ready:
-        <a class="btn instagram" href="https://instagram.com/USERNAME" target="_blank" rel="noopener" data-i18n="contact.ig">إنستغرام</a>
-        -->
-      </div>
+    <section id="contact" class="section container contact-section" aria-labelledby="contact-title">
+      <div class="contact-heading reveal"><p class="eyebrow"><span class="section-index">05 /</span><span data-i18n="contact.label">الخطوة الجاية</span></p><h2 id="contact-title"><span data-i18n="contact.title1">عندك فكرة؟</span><br /><span class="accent" data-i18n="contact.title2">خلّينا نعطيها مزاج.</span></h2><p data-i18n="contact.sub">مشروع جديد، تطوير شغلك، أو سؤال عن الكورس. نبدأ برسالة منك.</p><a class="btn primary whatsapp" href="https://wa.me/9647775559340" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.5L3 20.5l1.4-4.9A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M8 7.6c-.8 1.5 1 4.3 2.2 5.5 1.2 1.2 3.9 2.9 5.2 2.1l.9-1.4-2.5-1.2-.9 1c-1.5-.6-2.7-1.8-3.3-3.3l.9-.8L9.4 7Z"/></svg><span data-i18n="contact.wa">احچي ويانا على واتساب</span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a><p class="contact-number"><bdi dir="ltr">+964 777 555 9340</bdi></p><a class="contact-email" href="mailto:eng.amjedahmed@gmail.com" dir="ltr">eng.amjedahmed@gmail.com</a></div>
+      <div class="contact-flower" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© <span id="year"></span> MIZAJ STUDIO</span>
-    <span data-i18n="footer.by">by Eng. Amjad Ahmed</span>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="footer"><div class="container footer-inner"><a class="footer-brand" href="#top" dir="ltr">MIZAJ STUDIO<span><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4v92M4 50h92M17.5 17.5l65 65m0-65-65 65" stroke="currentColor" stroke-width="9"/></svg></span></a><p><span>© <span id="year">2026</span></span> <span data-i18n="footer.rights">مزاج ستوديو. كل الحقوق محفوظة.</span></p><a class="back-top" href="#top"><span data-i18n="footer.top">للأعلى</span><span aria-hidden="true">↑</span></a></div><div class="container footer-bottom"><span data-i18n="footer.by">بفكرة وخبرة م. أمجد أحمد</span><span data-i18n="footer.location">بغداد، العراق</span></div></footer>
 </body>
 </html>
