@@ -119,3 +119,29 @@ export function storySegment(seconds) {
   if (seconds < 3.3) return { from: STORY_POSES.connection, to: STORY_POSES.system, amount: smoothstep((seconds - 2.1) / 1.2) };
   return { from: STORY_POSES.system, to: STORY_POSES.clarity, amount: smoothstep((seconds - 3.3) / 1.2) };
 }
+
+// The two inputs to orders meet before orders feed the reporting platform.
+const connectionWindows = {
+  'products-inventory': [1.2, 1.79],
+  'inventory-orders': [1.53, 2.11],
+  'customers-orders': [1.57, 2.11],
+  'orders-reports': [1.97, 2.4],
+};
+
+export function connectionProgress(id, seconds) {
+  const [start, end] = connectionWindows[id];
+  return smoothstep((seconds - start) / (end - start));
+}
+
+// Fractional edge index at the head of a line drawn along moving anchors.
+export function routeHead(edgeLengths, progress) {
+  if (progress <= 0) return 0;
+  if (progress >= 1) return edgeLengths.length;
+  let remaining = edgeLengths.reduce((sum, length) => sum + length, 0) * progress;
+  for (let edge = 0; edge < edgeLengths.length; edge += 1) {
+    const length = edgeLengths[edge];
+    if (length > 0 && remaining <= length) return edge + remaining / length;
+    remaining -= length;
+  }
+  return edgeLengths.length;
+}

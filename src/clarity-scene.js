@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { GATEWAY_SPEC, storySegment, smoothstep } from './scene-math.js';
+import { GATEWAY_SPEC, storySegment, connectionProgress, routeHead } from './scene-math.js';
 
 const RADIAL_SEGMENTS = 6;
 const SAMPLES_PER_EDGE = 8;
@@ -116,7 +116,7 @@ export async function mountGateway(container, { onStage, onState, onError } = {}
     materials.push(navy);
     const gold = new THREE.MeshStandardMaterial({
       color: GATEWAY_SPEC.palette.gold, roughness: 0.38, metalness: 0.26,
-      transparent: true, opacity: 1,
+
     });
     materials.push(gold);
     const shadowMaterial = new THREE.ShaderMaterial({
@@ -162,6 +162,7 @@ export async function mountGateway(container, { onStage, onState, onError } = {}
       model.add(mesh);
       return {
         mesh, geometry, ringCount,
+        edgeLengths: new Float32Array(link.points.length - 1),
         anchors: link.points.map(point => ({
           unit: unitMap.get(point.unit),
           local: new THREE.Vector3(...point.at).sub(localOrigins.get(point.unit)),
@@ -232,20 +233,30 @@ export async function mountGateway(container, { onStage, onState, onError } = {}
       inView = intersectsViewport();
       return !document.hidden && inView;
     }
-    function updateRoutes() {
+    function updateRoutes(seconds) {
       model.updateMatrixWorld(true);
       routes.forEach(route => {
+        const progress = connectionProgress(route.mesh.name, seconds);
+        route.mesh.visible = progress > 0;
+        if (!route.mesh.visible) return;
         route.anchors.forEach(anchor => anchor.current.copy(anchor.local).applyMatrix4(anchor.unit.matrixWorld));
-        for (let ring = 0; ring < route.ringCount; ring += 1) {
-          const edge = Math.min(route.anchors.length - 2, Math.floor(ring / SAMPLES_PER_EDGE));
-          const amount = Math.min(1, (ring - edge * SAMPLES_PER_EDGE) / SAMPLES_PER_EDGE);
+        for (let edge = 0; edge < route.edgeLengths.length; edge += 1) {
+          route.edgeLengths[edge] = route.anchors[edge].current.distanceTo(route.anchors[edge + 1].current);
+        }
+        const head = routeHead(route.edgeLengths, progress) * SAMPLES_PER_EDGE;
+        const lastRing = Math.ceil(head);
+        route.geometry.setDrawRange(0, lastRing * RADIAL_SEGMENTS * 6);
+        for (let ring = 0; ring <= lastRing; ring += 1) {
+          const sample = Math.min(ring, head);
+          const edge = Math.min(route.anchors.length - 2, Math.floor(sample / SAMPLES_PER_EDGE));
+          const amount = Math.min(1, (sample - edge * SAMPLES_PER_EDGE) / SAMPLES_PER_EDGE);
           route.samples[ring].lerpVectors(route.anchors[edge].current, route.anchors[edge + 1].current, amount);
         }
         const positions = route.geometry.attributes.position.array;
         const normals = route.geometry.attributes.normal.array;
-        for (let ring = 0; ring < route.ringCount; ring += 1) {
+        for (let ring = 0; ring <= lastRing; ring += 1) {
           const current = route.samples[ring];
-          tangent.subVectors(route.samples[Math.min(route.ringCount - 1, ring + 1)], route.samples[Math.max(0, ring - 1)]);
+          tangent.subVectors(route.samples[Math.min(lastRing, ring + 1)], route.samples[Math.max(0, ring - 1)]);
           if (tangent.lengthSq() < 1e-12) tangent.set(0, 1, 0);
           tangent.normalize();
           guide.set(0, Math.abs(tangent.y) > 0.9 ? 0 : 1, Math.abs(tangent.y) > 0.9 ? 1 : 0);
@@ -283,11 +294,9 @@ export async function mountGateway(container, { onStage, onState, onError } = {}
           start.rotation[2] + (end.rotation[2] - start.rotation[2]) * amount,
         );
       });
-      gold.opacity = smoothstep((seconds - 1.2) / 1.0);
-      routes.forEach(route => { route.mesh.visible = gold.opacity > 0; });
       const reports = unitMap.get('reports').position;
       shadow.position.set(reports.x, -0.014, reports.z + 0.22);
-      updateRoutes();
+      updateRoutes(seconds);
     }
     function render() {
       if (disposed || lostContext) return;
