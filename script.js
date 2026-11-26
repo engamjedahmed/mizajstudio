@@ -1,199 +1,201 @@
-// Arabic lives in the HTML, keeping the site useful before JavaScript loads.
-const EN = {
-  "skip": "Skip to content",
-  "brand.home": "MIZAJ STUDIO — Home",
-  "nav.label": "Main navigation",
-  "nav.services": "Services",
-  "nav.about": "About Mizaj",
-  "nav.course": "The course",
-  "nav.contact": "Let's talk",
-  "menu.open": "Open menu",
-  "menu.close": "Close menu",
-  "hero.eyebrow": "Digital studio · Baghdad, Iraq",
-  "hero.title1": "Your idea.",
-  "hero.title2": "A new energy.",
-  "hero.lead": "We turn your ideas into digital solutions that feel like you. Systems that organize your work, websites that express your identity, and catalogs that let your products speak.",
-  "hero.cta1": "Let's start your project",
-  "hero.cta2": "Explore our services",
-  "hero.credit": "Founded by Eng. Amjad Ahmed",
-  "hero.bottom": "Creative thinking. Practical solutions.",
-  "strip.systems": "Business systems",
-  "strip.web": "Digital experiences",
-  "strip.catalogs": "Professional catalogs",
-  "services.label": "What we do",
-  "services.title": "Every idea has a way forward.",
-  "services.sub": "We choose technology that works for your business and design it around your needs.",
-  "services.s1.t": "A clearer view of your business.",
-  "services.s1.type": "Customer systems & demand planning",
-  "services.s1.d": "Customer accounts, branch-based permissions, stock and demand planning, and exportable reports. We define the features and capacity around your project.",
-  "services.s1.tag1": "Organization",
-  "services.s1.tag2": "Tracking",
-  "services.s1.tag3": "Reporting",
-  "services.s1.link": "Let's talk about your system",
-  "services.s2.t": "A presence that feels like you.",
-  "services.s2.type": "Websites & digital experiences",
-  "services.s2.d": "Fast, elegant websites in Arabic and English. A clear experience on every screen that helps people discover you and get in touch.",
-  "services.s2.tag1": "Design",
-  "services.s2.tag2": "Development",
-  "services.s2.tag3": "Bilingual",
-  "services.s2.link": "Let's plan your website",
-  "services.s3.t": "Let your products do the talking.",
-  "services.s3.type": "Professional catalogs",
-  "services.s3.d": "Arabic and English PDF catalogs, with or without prices and with clickable contact links. We organize images, specifications and uses, with sales representative editions as needed.",
-  "services.s3.tag1": "Interactive",
-  "services.s3.tag2": "Print-ready",
-  "services.s3.tag3": "Easy to share",
-  "services.s3.link": "Let's shape your catalog",
-  "services.s4.t": "Your menu. A scan away.",
-  "services.s4.type": "Digital menus & QR experiences",
-  "services.s4.d": "A branded PDF menu with a QR code for easy access. We can also design product pages, recipes and preparation guides within your agreed scope.",
-  "services.s4.tag1": "PDF menu",
-  "services.s4.tag3": "Product details",
-  "services.s4.link": "Let's design your menu",
-  "services.s5.t": "Clear content. A prepared team.",
-  "services.s5.type": "Presentations & training materials",
-  "services.s5.d": "Product presentations and training materials for sales teams and baristas. We turn approved content into slides, product cards, recipes and clear comparisons.",
-  "services.s5.tag1": "Product decks",
-  "services.s5.tag2": "Sales",
-  "services.s5.tag3": "Barista",
-  "services.s5.link": "Let's shape your next presentation",
-  "brief.label": "Clarity from the start",
-  "brief.title": "A clear brief. Every detail defined.",
-  "brief.intro": "Every project has its own needs. Your quote sets out what is included and what needs a separate agreement.",
-  "brief.q1": "How is a project priced?",
-  "brief.a1": "By pages, products, languages and editions, plus system features and user permissions. Your project quote defines the price, schedule and revision rounds.",
-  "brief.q2": "What should I prepare?",
-  "brief.a2": "Your business information, available brand assets, and approved product images and text. We review the materials and identify any additional requirements before starting.",
-  "brief.q3": "Are hosting and maintenance included?",
-  "brief.a3": "Domain, hosting, renewal and maintenance fees are listed separately from design and development. New features or changes outside the agreed scope need an additional agreement.",
-  "about.label": "About Mizaj",
-  "about.title1": "We understand business.",
-  "about.title2": "We design what helps it.",
-  "about.founder": "Eng. Amjad Ahmed",
-  "about.role": "Founder, MIZAJ STUDIO · Baghdad",
-  "about.p1": "MIZAJ STUDIO is a digital studio founded by Eng. Amjad Ahmed in Baghdad. We bring sales, barista and interior design experience together to present products and information clearly to your team and customers.",
-  "about.p2": "We organize information and visual identity, connecting design with everyday use. From a supplier catalog to a café menu or customer system, clarity and ease of use guide every detail.",
-  "about.note": "From Baghdad, for ideas worth bringing to life.",
-  "process.label": "Our approach",
-  "process.title": "A conversation. Then a solution.",
-  "process.sub": "Room for the idea. Care at every step.",
-  "process.p1.t": "Listen & understand",
-  "process.p1.d": "We discuss your business and audience, then review the approved content and images you provide for the project.",
-  "process.p2.t": "Plan & design",
-  "process.p2.d": "We define pages, products, languages and features, agreeing on the price and scope before production.",
-  "process.p3.t": "Build & review",
-  "process.p3.d": "We develop the design, review the details and links with you, and prepare delivery within the agreed scope.",
-  "course.label": "Room to learn",
-  "course.badge": "Coming soon · For beginners in Iraq",
-  "course.title": "AI with Awareness.",
-  "course.desc": "New tools. A deeper understanding. A course on using AI at work and in everyday life, thoughtfully and responsibly.",
-  "course.p1": "What AI is and how it works",
-  "course.p2": "Practical applications for work and study",
-  "course.p3": "Safe and responsible use",
-  "course.by": "Prepared & presented by Eng. Amjad Ahmed",
-  "course.cta": "Ask about the course on WhatsApp",
-  "contact.label": "The next step",
-  "contact.title1": "Have an idea?",
-  "contact.title2": "Give it a little Mizaj.",
-  "contact.sub": "A new project, a better way to work, or a question about the course. It starts with a message from you.",
-  "contact.wa": "Let's talk on WhatsApp",
-  "footer.rights": "MIZAJ STUDIO. All rights reserved.",
-  "footer.top": "Back to top",
-  "footer.by": "Founded by Eng. Amjad Ahmed",
-  "footer.location": "Baghdad, Iraq",
+import { EN } from './src/translations.js';
+import { initDemos } from './src/demos.js';
+
+const $ = (selector) => document.querySelector(selector);
+const nodes = [...document.querySelectorAll('[data-i18n]')];
+const ariaNodes = [...document.querySelectorAll('[data-i18n-aria]')];
+const altNodes = [...document.querySelectorAll('[data-i18n-alt]')];
+const AR = Object.fromEntries(nodes.map(el => [el.dataset.i18n, el.textContent]));
+for (const el of ariaNodes) AR[el.dataset.i18nAria] = el.getAttribute('aria-label');
+for (const el of altNodes) AR[el.dataset.i18nAlt] = el.alt;
+const languageButton = $('#language-toggle');
+const menuButton = $('#menu-toggle');
+const nav = $('#main-nav');
+const mobile = matchMedia('(max-width:760px)');
+const reduced = matchMedia('(prefers-reduced-motion:reduce)');
+const viewport = $('#gateway-viewport');
+const canvasHost = $('#gateway-canvas');
+const status = $('#scene-status');
+const playButton = $('#scene-play');
+const pauseButton = $('#scene-pause');
+const replayButton = $('#scene-replay');
+const staticButton = $('#scene-static');
+const stageNodes = [...document.querySelectorAll('[data-stage]')];
+let language = 'ar';
+let demos;
+let scene = null;
+let sceneState = reduced.matches ? 'reduced' : 'static';
+let sceneStage = 3;
+let requestId = 0;
+let loading = false;
+let timeoutId;
+
+const sceneMessages = {
+ ar: {
+  static: 'الحركة اختيارية. شاهد كيف تتصل الأجزاء في مشهد قصير.',
+  loading: 'نجهّز المشهد. تبقى الصورة متاحة أثناء التحميل.',
+  ready: 'المشهد جاهز للتشغيل.',
+  playing: ['١ من ٤ — وحدات منفصلة، ومعنى يتشكّل.', '٢ من ٤ — العلاقات تصل بين الوظائف.', '٣ من ٤ — الأجزاء تنتظم في بنية واحدة.', '٤ من ٤ — بوابة الوضوح تستقر.'],
+  paused: 'المشهد متوقف مؤقتًا. يمكنك متابعة الحركة.',
+  complete: 'اكتمل المشهد واستقرت البوابة. يمكنك إعادة المشاهدة.',
+  reduced: 'تظهر الصورة الثابتة احترامًا لإعداد تقليل الحركة في جهازك.',
+  error: 'تعذّر تشغيل الحركة على هذا الجهاز. الصورة الثابتة متاحة، ويمكنك المحاولة مجددًا.',
+  resume: 'متابعة المشهد'
+ },
+ en: {
+  static: 'Motion is optional. See the parts connect in a short scene.',
+  loading: 'Preparing the scene. The still image remains available.',
+  ready: 'The scene is ready to play.',
+  playing: ['1 of 4 — Separate modules. A meaning taking shape.', '2 of 4 — Relationships connect the functions.', '3 of 4 — The parts form one structure.', '4 of 4 — The Clarity Gateway settles.'],
+  paused: 'The scene is paused. You can resume when you are ready.',
+  complete: 'The scene has finished and the gateway has settled. You can replay it.',
+  reduced: 'A still image respects your device’s reduced-motion setting.',
+  error: 'Motion could not start on this device. The still image is available; you can try again.',
+  resume: 'Resume scene'
+ }
 };
 
-const nodes = document.querySelectorAll("[data-i18n]");
-const ariaNodes = document.querySelectorAll("[data-i18n-aria]");
-const AR = { "menu.close": "إغلاق القائمة" };
-nodes.forEach((el) => { AR[el.dataset.i18n] = el.textContent; });
-ariaNodes.forEach((el) => { AR[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
-
-const langToggle = document.getElementById("langToggle");
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("mainNav");
-const mobileLayout = window.matchMedia("(max-width: 760px)");
-const metaDescription = document.querySelector('meta[name="description"]');
-const arabicDescription = metaDescription.content;
-let currentLanguage = "ar";
-
-function setMenu(open, returnFocus = false) {
-  nav.classList.toggle("is-open", open);
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.dataset.i18nAria = open ? "menu.close" : "menu.open";
-  menuToggle.setAttribute("aria-label", (currentLanguage === "en" ? EN : AR)[menuToggle.dataset.i18nAria]);
-  if (returnFocus) menuToggle.focus();
+function updateSceneUI() {
+ const dict = language === 'en' ? EN : AR;
+ const message = sceneMessages[language];
+ playButton.disabled = reduced.matches || loading || sceneState === 'playing';
+ playButton.textContent = sceneState === 'paused' ? message.resume : dict.scenePlay;
+ pauseButton.disabled = sceneState !== 'playing';
+ replayButton.disabled = !scene || loading || reduced.matches;
+ staticButton.disabled = !scene && !loading;
+ stageNodes.forEach((node, index) => {
+   node.classList.toggle('is-current', index === sceneStage);
+   if (index === sceneStage) node.setAttribute('aria-current', 'step');
+   else node.removeAttribute('aria-current');
+ });
+ const text = sceneState === 'playing' ? message.playing[sceneStage] : message[sceneState] || message.static;
+ if (status.textContent !== text) status.textContent = text;
 }
 
-function setLang(language) {
-  currentLanguage = language === "en" ? "en" : "ar";
-  const english = currentLanguage === "en";
-  const dict = english ? EN : AR;
-  document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = english ? "ltr" : "rtl";
-  nodes.forEach((el) => { el.textContent = dict[el.dataset.i18n]; });
-  ariaNodes.forEach((el) => { el.setAttribute("aria-label", dict[el.dataset.i18nAria]); });
-  langToggle.textContent = english ? "عربي" : "EN";
-  langToggle.lang = english ? "ar" : "en";
-  langToggle.setAttribute("aria-label", english ? "التبديل إلى العربية" : "Switch to English");
-  document.title = english ? "MIZAJ STUDIO | Digital studio in Baghdad" : "MIZAJ STUDIO | مزاج ستوديو";
-  metaDescription.content = english
-    ? "MIZAJ STUDIO, a digital studio in Baghdad founded by Eng. Amjad Ahmed. Customer systems, bilingual websites, catalogs, QR menus and training materials."
-    : arabicDescription;
-  try { localStorage.setItem("mizaj-lang", currentLanguage); } catch { /* Storage may be unavailable. */ }
+function showStill(nextState = 'static') {
+ requestId += 1;
+ clearTimeout(timeoutId);
+ loading = false;
+ scene?.dispose();
+ scene = null;
+ viewport.classList.remove('is-live');
+ sceneState = nextState;
+ sceneStage = 3;
+ updateSceneUI();
 }
 
-langToggle.addEventListener("click", () => { setLang(currentLanguage === "en" ? "ar" : "en"); });
-menuToggle.addEventListener("click", () => {
-  const open = menuToggle.getAttribute("aria-expanded") !== "true";
-  setMenu(open);
-  if (open) nav.querySelector("a").focus();
-});
-nav.addEventListener("click", (event) => {
-  const link = event.target.closest('a[href^="#"]');
-  if (link && mobileLayout.matches && menuToggle.getAttribute("aria-expanded") === "true") {
-    setMenu(false);
-    const target = document.querySelector(link.getAttribute("href"));
-    if (target) {
-      target.setAttribute("tabindex", "-1");
-      target.focus({ preventScroll: true });
-    }
-  }
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
-    setMenu(false, true);
-  }
-});
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".nav") && menuToggle.getAttribute("aria-expanded") === "true") setMenu(false);
-});
-mobileLayout.addEventListener("change", () => {
-  // Avoid leaving keyboard focus inside navigation that becomes hidden on mobile.
-  const focusWasInNav = nav.contains(document.activeElement);
-  setMenu(false, mobileLayout.matches && focusWasInNav);
-});
-
-let savedLanguage = "ar";
-try { savedLanguage = localStorage.getItem("mizaj-lang") || "ar"; } catch { /* Use Arabic by default. */ }
-setLang(savedLanguage);
-document.documentElement.classList.add("js-enabled");
-langToggle.hidden = false;
-menuToggle.hidden = false;
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Progressive enhancement: never hide content without a working observer.
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll(".reveal").forEach((el) => {
-    el.classList.add("reveal-pending");
-    observer.observe(el);
-  });
+async function startScene() {
+ if (reduced.matches || loading) return;
+ if (scene) {
+   viewport.classList.add('is-live');
+   if (sceneState === 'paused') scene.resume(); else scene.play();
+   return;
+ }
+ const currentRequest = ++requestId;
+ loading = true;
+ sceneState = 'loading';
+ updateSceneUI();
+ timeoutId = setTimeout(() => {
+   if (currentRequest === requestId) showStill('error');
+ }, 8000);
+ try {
+   const { mountGateway } = await import('./src/clarity-scene.js');
+   if (currentRequest !== requestId || reduced.matches) return;
+   const mounted = await mountGateway(canvasHost, {
+     onStage(index) {
+       if (currentRequest !== requestId) return;
+       sceneStage = index;
+       updateSceneUI();
+     },
+     onState(nextState) {
+       if (currentRequest !== requestId) return;
+       sceneState = nextState;
+       if (nextState === 'ready') viewport.classList.add('is-live');
+       updateSceneUI();
+     },
+     onError(error) {
+       if (currentRequest !== requestId) return;
+       if (import.meta.env.DEV) console.warn('Gateway fallback:', error.message);
+       showStill('error');
+     }
+   });
+   if (currentRequest !== requestId || reduced.matches) { mounted.dispose(); return; }
+   scene = mounted;
+   clearTimeout(timeoutId);
+   loading = false;
+   viewport.classList.add('is-live');
+   scene.play();
+ } catch (error) {
+   if (currentRequest !== requestId) return;
+   if (import.meta.env.DEV) console.warn('Gateway unavailable:', error.message);
+   showStill('error');
+ }
 }
+
+function setMenu(open, restoreFocus = false) {
+ nav.classList.toggle('is-open', open);
+ menuButton.setAttribute('aria-expanded', String(open));
+ menuButton.textContent = open ? (language === 'ar' ? 'إغلاق' : 'Close') : (language === 'ar' ? AR.menu : EN.menu);
+ if (restoreFocus) menuButton.focus();
+}
+
+function setLanguage(value) {
+ language = value === 'en' ? 'en' : 'ar';
+ const dict = language === 'en' ? EN : AR;
+ document.documentElement.lang = language;
+ document.documentElement.dir = language === 'en' ? 'ltr' : 'rtl';
+ for (const node of nodes) node.textContent = dict[node.dataset.i18n] ?? AR[node.dataset.i18n];
+ for (const node of ariaNodes) node.setAttribute('aria-label', dict[node.dataset.i18nAria] ?? AR[node.dataset.i18nAria]);
+ for (const node of altNodes) node.alt = dict[node.dataset.i18nAlt] ?? AR[node.dataset.i18nAlt];
+ languageButton.textContent = language === 'ar' ? 'English' : 'العربية';
+ languageButton.lang = language === 'ar' ? 'en' : 'ar';
+ languageButton.setAttribute('aria-label', language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+ document.title = language === 'ar' ? 'Mizaj Studio | مزاج ستوديو' : 'Mizaj Studio | From complexity to clarity';
+ $('meta[name="description"]').content = language === 'ar'
+  ? 'مزاج ستوديو من بغداد. مواقع وتجارب رقمية بالعربية والإنجليزية، كتالوجات، وأنظمة تُبنى لطريقة عملك.'
+  : 'Mizaj Studio, a digital studio in Baghdad. Arabic and English websites, interactive experiences, catalogs and business tools.';
+ demos?.setLanguage(language);
+ setMenu(menuButton.getAttribute('aria-expanded') === 'true');
+ updateSceneUI();
+ try { localStorage.setItem('mizaj-lang', language); } catch { /* Optional preference storage. */ }
+}
+
+languageButton.addEventListener('click', () => setLanguage(language === 'ar' ? 'en' : 'ar'));
+menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+nav.addEventListener('click', event => {
+ const link = event.target.closest('a[href^="#"]');
+ if (link && mobile.matches) {
+   setMenu(false);
+   const target = document.querySelector(link.getAttribute('href'));
+   target?.setAttribute('tabindex', '-1');
+   target?.focus({ preventScroll:true });
+ }
+});
+document.addEventListener('keydown', event => {
+ if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false, true);
+});
+document.addEventListener('click', event => {
+ if (!event.target.closest('.navigation') && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false);
+});
+mobile.addEventListener('change', () => setMenu(false, mobile.matches && nav.contains(document.activeElement)));
+reduced.addEventListener('change', () => showStill(reduced.matches ? 'reduced' : 'static'));
+playButton.addEventListener('click', startScene);
+pauseButton.addEventListener('click', () => scene?.pause());
+replayButton.addEventListener('click', () => scene?.replay());
+staticButton.addEventListener('click', () => showStill(reduced.matches ? 'reduced' : 'static'));
+for (const link of document.querySelectorAll('[data-demo-link]')) {
+ link.addEventListener('click', () => document.querySelector('[data-demo-tab="' + link.dataset.demoLink + '"]')?.click());
+}
+window.addEventListener('pagehide', event => {
+ if (event.persisted) scene?.pause(); else { scene?.dispose(); demos?.dispose(); }
+});
+
+document.documentElement.classList.add('js-enabled');
+languageButton.hidden = false;
+menuButton.hidden = false;
+$('#scene-controls').hidden = false;
+$('#year').textContent = String(new Date().getFullYear());
+let storedLanguage = 'ar';
+try { storedLanguage = localStorage.getItem('mizaj-lang') || 'ar'; } catch { /* Arabic default. */ }
+demos = initDemos({ language:storedLanguage });
+setLanguage(storedLanguage);

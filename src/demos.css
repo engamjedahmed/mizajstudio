@@ -1,0 +1,442 @@
+/* Local demo presentation. The surrounding page owns layout and typography. */
+:is(.demo-shell, .demo-content) [hidden] {
+  display: none !important;
+}
+
+:is(.demo-shell, .demo-content) .demo-toolbar,
+:is(.demo-shell, .demo-content) .demo-input-grid,
+:is(.demo-shell, .demo-content) .demo-products,
+:is(.demo-shell, .demo-content) .demo-summary,
+:is(.demo-shell, .demo-content) .demo-output,
+:is(.demo-shell, .demo-content) .demo-field,
+:is(.demo-shell, .demo-content) .demo-product {
+  min-width: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  padding: .3rem .55rem;
+  border: 1px solid var(--line, #cfd3dc);
+  border-radius: 2px;
+  background: var(--pale, #edece7);
+  color: var(--navy, #16213e);
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(10rem, 1fr);
+  align-items: end;
+  gap: 1rem;
+  margin-block: 1.6rem 1rem;
+}
+
+:is(.demo-shell, .demo-content) .demo-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .45rem;
+  color: var(--navy, #16213e);
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+:is(.demo-shell, .demo-content) .demo-field > label {
+  display: block;
+  color: inherit;
+  font: inherit;
+}
+
+:is(.demo-shell, .demo-content) .demo-field input,
+:is(.demo-shell, .demo-content) .demo-field select,
+:is(.demo-shell, .demo-content) .demo-quantity-row input,
+:is(.demo-shell, .demo-content) #demo-copy-text {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  padding: .65rem .75rem;
+  border: 1px solid var(--line, #cfd3dc);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--navy, #16213e);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+:is(.demo-shell, .demo-content) .demo-field input::placeholder {
+  color: var(--muted, #52617a);
+  opacity: 1;
+}
+
+:is(.demo-shell, .demo-content) .demo-field select {
+  padding-inline-end: 2rem;
+}
+
+:is(.demo-shell, .demo-content) :is(input, select, textarea, button):focus-visible {
+  outline: 2px solid var(--navy, #16213e);
+  outline-offset: 3px;
+}
+
+:is(.demo-shell, .demo-content) [aria-invalid="true"] {
+  border-color: #963c32 !important;
+}
+
+:is(.demo-shell, .demo-content) .demo-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: .75rem 1.5rem;
+}
+
+:is(.demo-shell, .demo-content) .demo-product {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: 1.1rem;
+  border: 1px solid var(--line, #cfd3dc);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--navy, #16213e);
+}
+
+:is(.demo-shell, .demo-content) .demo-product h4 {
+  margin: 0;
+  color: var(--navy, #16213e);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-product p {
+  margin: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-product > [dir="ltr"] {
+  align-self: flex-start;
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  font-size: .72rem;
+  letter-spacing: .035em;
+}
+
+:is(.demo-shell, .demo-content) .demo-product-meta {
+  color: var(--muted, #52617a);
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  min-width: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-product > .demo-product-actions {
+  margin-block-start: auto;
+  padding-block-start: .3rem;
+}
+
+:is(.demo-shell, .demo-content) .button.button-small {
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  height: auto;
+  max-width: 100%;
+  padding: .55rem .85rem;
+  border-radius: 2px;
+  font: inherit;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: normal;
+  text-align: center;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+:is(.demo-shell, .demo-content) .button.button-small:not(.button-secondary):not(:disabled) {
+  border-color: var(--navy, #16213e);
+  background: var(--navy, #16213e);
+  color: var(--cream, #f7f6f3);
+}
+
+:is(.demo-shell, .demo-content) .button.button-small.button-secondary:not(:disabled) {
+  border-color: var(--line, #cfd3dc);
+  background: #fff;
+  color: var(--navy, #16213e);
+}
+
+:is(.demo-shell, .demo-content) .button.button-small:not(.button-secondary):not(:disabled):hover {
+  border-color: #283655;
+  background: #283655;
+}
+
+:is(.demo-shell, .demo-content) .button.button-small.button-secondary:not(:disabled):hover {
+  border-color: var(--navy, #16213e);
+  background: var(--pale, #edece7);
+}
+
+:is(.demo-shell, .demo-content) .button.button-small:disabled {
+  border-color: var(--line, #cfd3dc);
+  background: var(--pale, #edece7);
+  color: var(--muted, #52617a);
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+:is(.demo-shell, .demo-content) .demo-product-actions > [data-demo-action="add"] {
+  width: 100%;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-controls {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-controls > label {
+  color: var(--navy, #16213e);
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+  min-width: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-row .button.button-small {
+  flex: 1 0 44px;
+  min-width: 44px;
+  padding-inline: .25rem;
+  font-size: 1rem;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-row input {
+  flex: 1 1 48px;
+  width: 48px;
+  min-width: 44px;
+  padding-inline: .1rem;
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  text-align: center;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+:is(.demo-shell, .demo-content) .demo-quantity-row input::-webkit-inner-spin-button,
+:is(.demo-shell, .demo-content) .demo-quantity-row input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+:is(.demo-shell, .demo-content) .demo-summary,
+:is(.demo-shell, .demo-content) .demo-output {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--line, #cfd3dc);
+  border-radius: 2px;
+  background: var(--cream, #f7f6f3);
+  color: var(--navy, #16213e);
+}
+
+:is(.demo-shell, .demo-content) .demo-summary h4,
+:is(.demo-shell, .demo-content) .demo-output h4 {
+  margin-block: 0 .65rem;
+  color: var(--navy, #16213e);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+:is(.demo-shell, .demo-content) .demo-summary p,
+:is(.demo-shell, .demo-content) .demo-output p {
+  margin-block: .75rem;
+  font-size: .875rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) #demo-selection-list {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+:is(.demo-shell, .demo-content) .demo-selection-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem 1rem;
+  padding-block: .65rem;
+  border-block-start: 1px solid var(--line, #cfd3dc);
+  color: var(--navy, #16213e);
+  font-size: .875rem;
+  line-height: 1.7;
+}
+
+:is(.demo-shell, .demo-content) .demo-selection-item > span {
+  flex: 1 1 8rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-selection-item bdi {
+  display: inline-block;
+  margin-inline-start: .5rem;
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  font-size: .8125rem;
+}
+
+:is(.demo-shell, .demo-content) #demo-copy-fallback:not(:empty) {
+  margin-block-start: 1rem;
+}
+
+:is(.demo-shell, .demo-content) #demo-copy-text {
+  display: block;
+  margin-block-start: .5rem;
+  resize: vertical;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.2rem 1rem;
+  margin-block: 1.6rem 1.25rem;
+}
+
+:is(.demo-shell, .demo-content) #demo-planner-form {
+  margin: 0;
+  min-width: 0;
+}
+
+:is(.demo-shell, .demo-content) .demo-output {
+  margin-block-start: 1.5rem;
+}
+
+:is(.demo-shell, .demo-content) .demo-output .demo-result-value {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .7rem;
+  margin-block: 1rem;
+  color: var(--navy, #16213e);
+}
+
+:is(.demo-shell, .demo-content) .demo-result-value strong {
+  font-family: var(--mono, "IBM Plex Mono", monospace);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-field-error {
+  margin: .15rem 0 0;
+  color: #963c32;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-status {
+  min-height: 1.8em;
+  margin-block: .85rem 0;
+  color: var(--navy, #16213e);
+  font-size: .8125rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+:is(.demo-shell, .demo-content) .demo-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line, #cfd3dc);
+  color: var(--navy, #16213e);
+  font-size: .875rem;
+  line-height: 1.8;
+}
+
+:is(.demo-shell, .demo-content) .sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 760px) {
+  :is(.demo-shell, .demo-content) .demo-products,
+  :is(.demo-shell, .demo-content) .demo-input-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :is(.demo-shell, .demo-content) .demo-products {
+    gap: .65rem;
+  }
+
+  :is(.demo-shell, .demo-content) .demo-product {
+    padding: .75rem;
+  }
+}
+
+@media (max-width: 540px) {
+  :is(.demo-shell, .demo-content) .demo-toolbar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .85rem;
+  }
+
+  :is(.demo-shell, .demo-content) .demo-product .button.button-small {
+    padding-inline: .45rem;
+    font-size: .8125rem;
+  }
+
+  :is(.demo-shell, .demo-content) .demo-summary > .demo-product-actions .button.button-small {
+    flex: 1 1 9rem;
+  }
+
+  :is(.demo-shell, .demo-content) .demo-input-grid {
+    gap: 1rem .75rem;
+  }
+}
+
+@media (max-width: 359px) {
+  :is(.demo-shell, .demo-content) .demo-products,
+  :is(.demo-shell, .demo-content) .demo-input-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  :is(.demo-shell, .demo-content) .demo-product {
+    padding: 1rem;
+  }
+}

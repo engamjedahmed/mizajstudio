@@ -1,0 +1,21 @@
+{
+  "name": "mizaj-studio",
+  "version": "0.3.1-reconstruction",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node --check script.js && node --check src/clarity-scene.js"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/ibm-plex-sans-arabic": "5.3.0",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.8"
+  }
+}
